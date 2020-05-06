@@ -1,5 +1,5 @@
 {% set name = "echo" %}
-{% set version = "0.2" %}
+{% set version = "0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 50473083b662ec971aaf926f3b3ca703f416e2756522dd4c26da437f897ae0e1
+  sha256: bd30f1aefb500061124f123e3bb40cc59287fb257c5d7829d6e4327f5884318b
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -36,7 +36,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Callback Properties in Python'
+  summary: Callback Properties in Python
 
 extra:
   recipe-maintainers:
