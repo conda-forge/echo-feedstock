@@ -27,6 +27,10 @@ requirements:
     - pyqt
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - echo
     - echo.qt
