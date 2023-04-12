@@ -144,4 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@astrofrog-conda-forge](https://github.com/astrofrog-conda-forge/)
+* [@martinRenou](https://github.com/martinRenou/)
 
