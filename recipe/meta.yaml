@@ -1,5 +1,5 @@
 {% set name = "echo" %}
-{% set version = "0.5" %}
+{% set version = "0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fccacf010ac6d70a59d6f5553f3e50a380c14e1eb56c27eff2dbc5e7ccccc509
+  sha256: 1084fbf499078341808ddd55d5f8f858b8610efe9fcc46a9bb81f3353beae694
 
 build:
   noarch: python
@@ -16,17 +16,21 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
     - setuptools_scm
   run:
-    - python
+    - python >=3.6
     - numpy
     - setuptools
     - qtpy
     - pyqt
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - echo
     - echo.qt
