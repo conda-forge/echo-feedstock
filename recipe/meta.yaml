@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -24,7 +24,6 @@ requirements:
     - numpy
     - setuptools
     - qtpy
-    - pyqt
 
 test:
   requires:
@@ -33,7 +32,6 @@ test:
     - pip check
   imports:
     - echo
-    - echo.qt
 
 about:
   home: https://github.com/glue-viz/echo
