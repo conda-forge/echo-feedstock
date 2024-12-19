@@ -6,27 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 1c65d7048b9f0a58c1e00676fb552cfd169ea171c0e674613849335a38793509
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - setuptools_scm
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - numpy
     - importlib_metadata
 
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
   imports:
