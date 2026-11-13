@@ -1,5 +1,5 @@
 {% set name = "echo" %}
-{% set version = "0.16.0" %}
+{% set version = "0.17.0" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0487f835e38a51ae7487190a23e4a943d4e0179714f5a24df92a35782a53b331
+  sha256: d4cbe0462981b68a98d14227d976c76c3752c6065c298227d1bf8c36d9b84672
 
 build:
   noarch: python
