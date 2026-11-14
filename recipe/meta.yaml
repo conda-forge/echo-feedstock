@@ -1,6 +1,5 @@
 {% set name = "echo" %}
 {% set version = "0.17.0" %}
-{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -19,11 +18,11 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools_scm
+    - setuptools >=61.2
+    - setuptools-scm
   run:
     - python >={{ python_min }}
     - numpy
-    - importlib_metadata
 
 test:
   requires:
